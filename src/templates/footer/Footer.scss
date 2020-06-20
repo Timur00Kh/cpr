@@ -1,0 +1,25 @@
+.footer {
+  padding: 50px 0;
+
+  &__social-button {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #E8E9EF;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__copyright {
+    font-family: Gotham Pro, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color: #2C2E32;
+    opacity: 0.5;
+  }
+}

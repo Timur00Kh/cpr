@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Open Graph-->
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Разработка Web приложений и Сайтов">
+    <meta property="og:description" content="Cоздаем IT-продукт, приносящий прибыль при минимальных затратах">
+    <meta property="og:url" content="/">
+    <meta property="og:image" content="/icons/icon.svg">
+    <meta property="og:site_name" content="ЦПР">
+
+    <title>CPR</title>
+</head>
+<body>
+<header>
+    <%- require ('ejs-webpack-loader!./templates/nav/Nav.ejs')() %>
+</header>
+
+<main>
+    <%- require ('ejs-webpack-loader!./templates/banner/Banner.ejs')() %>
+    <%- require ('ejs-webpack-loader!./templates/why_choose_us/WhyChooseUs.ejs')() %>
+    <%- require ('ejs-webpack-loader!./templates/what_we_developed/WhatWeDeveloped.ejs')() %>
+    <%- require ('ejs-webpack-loader!./templates/form/form.ejs')() %>
+    <%- require ('ejs-webpack-loader!./templates/how_we_work/HowWeWork.ejs')() %>
+    <%- require ('ejs-webpack-loader!./templates/tech/Tech.ejs')() %>
+    <%- require ('ejs-webpack-loader!./templates/about/about.ejs')() %>
+    <%- require ('ejs-webpack-loader!./templates/contacts/Contacts.ejs')() %>
+</main>
+
+<%- require ('ejs-webpack-loader!./templates/footer/Footer.ejs')() %>
+</body>
+</html>

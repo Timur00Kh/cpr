@@ -1,0 +1,67 @@
+.lang-switch {
+
+  &__label {
+    text-transform: uppercase;
+    font-family: Gotham Pro, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    color: #722ED1;
+    cursor: pointer;
+    padding: 20px 0;
+    user-select: none;
+
+
+
+    &:after {
+      display: inline-block;
+      content: url("v.svg");
+      margin-left: 4px;
+      margin-bottom: 2px;
+      transform: none;
+      transition: all .4s ease-out;
+    }
+
+    &--active {
+      &:after {
+        transform: rotate(180deg);
+        transition: all .4s ease;
+      }
+    }
+  }
+
+  &__list {
+    background: white;
+    position: absolute;
+    display: inline;
+    box-shadow: -10px 10px 60px rgba(118, 118, 139, 0.12);
+    right: 16%;
+    top: calc(0px + 130%);
+    padding: 20px 0;
+    animation-duration: .4s;
+  }
+
+  &__link {
+    width: 90px;
+    height: 29px;
+    display: flex;
+    font-family: Gotham Pro, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #2C2E32;
+    text-align: left;
+    padding-left: 20px;
+    align-items: center;
+
+    &:hover {
+      background: lighten(#722ED1, 40);
+      color: #2C2E32;
+      text-decoration: none;
+    }
+
+  }
+}

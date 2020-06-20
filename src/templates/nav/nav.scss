@@ -1,0 +1,54 @@
+@import "lang_switch/LangSwitch";
+
+$h-lg: 80px;
+$h-sm: 60px;
+
+.nav {
+  height: $h-lg;
+
+  @media (max-width: 768px) {
+    height: $h-sm;
+  }
+
+  &__section {
+    height: $h-lg;
+
+    @media (max-width: 768px) {
+      height: $h-sm;
+    }
+  }
+
+  &__icon {
+
+  }
+
+  &__link {
+    font-family: Gotham Pro, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #2C2E32;
+    transition: color .175s ease;
+    padding: 20px 0;
+
+    &:hover {
+      color: #722ED1;
+      transition: color .175s ease;
+      text-decoration: none;
+    }
+
+    &:active {
+      color: darken(#722ED1, 0.2);
+      transition: color .175s ease;
+      text-decoration: none;
+    }
+  }
+
+}
+
+
+
+

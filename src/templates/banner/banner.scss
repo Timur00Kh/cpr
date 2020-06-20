@@ -1,0 +1,58 @@
+@import "src/css/cpr-button";
+
+.banner {
+  min-height: 700px;
+  height: 700px;
+  background-size: cover;
+  padding: 140px 0;
+  
+  @media (min-width: 720px) {
+    background: #F9F9FA url("img/bg.png") no-repeat center;
+    padding: 140px 0;
+  }
+  @media (max-width: 720px) {
+    background: #F9F9FA url("img/bg-sm.png") no-repeat center;
+    padding: 100px 0;
+  }
+  @media (max-width: 375px) {
+    background: #F9F9FA url("img/bg-xs.png") no-repeat center;
+    padding: 50px 0;
+  }
+
+  h2 {
+    font-family: Gotham Pro, serif;
+    font-style: normal;
+    text-align: center;
+
+    @media (min-width: 720px) {
+      font-size: 44px;
+      line-height: 42px;
+      font-weight: 300;
+    }
+    @media (max-width: 720px) {
+      font-size: 30px;
+      line-height: 38px;
+      font-weight: 400;
+    }
+    @media (max-width: 375px) {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 400;
+    }
+  }
+
+  p {
+    /* Regular 16px | 24px */
+    font-family: Gotham Pro, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    text-align: center;
+  }
+
+  button {
+    @extend .cpr-button
+  }
+}

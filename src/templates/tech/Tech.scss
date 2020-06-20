@@ -1,0 +1,79 @@
+.tech {
+  background: #F9F9FA;
+  padding: 100px 0;
+
+
+
+  &__header {
+    padding: 100px 0;
+    text-align: center;
+
+    @media (min-width: 576px) {
+      font-size: 30px;
+      line-height: 38px;
+      padding: 100px 0;
+      font-weight: 300;
+    }
+    @media (max-width: 576px) {
+      padding: 50px 0;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 400;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: calc(50% - 40px);
+      height: 2px;
+      background: #722ED1;
+      @media (min-width: 576px) {
+        $w: 50px;
+        width: $w;
+        left: calc(50% - #{$w} / 2);
+      }
+      @media (max-width: 576px) {
+        $w: 30px;
+        width: $w;
+        left: calc(50% - #{$w} / 2);
+      }
+    }
+  }
+
+  &__item {
+    text-align: left;
+
+    @media (max-width: 992px) {
+      text-align: center;
+    }
+
+
+
+    &__icon {
+      margin-bottom: 32px;
+    }
+
+    &__header {
+      /* Regular 24px | */
+      font-family: Gotham Pro, serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 32px;
+      /* identical to box height, or 133% */
+      /* Black */
+      color: #2C2E32;
+    }
+
+    &__text {
+      font-family: Gotham Pro, serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      /* or 150% */
+      /* Black */
+      color: #2C2E32;
+    }
+  }
+}

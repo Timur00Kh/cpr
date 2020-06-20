@@ -1,0 +1,56 @@
+.contacts {
+  padding: 100px 0;
+  background: #F9F9FA;
+  text-align: left;
+
+  &__header {
+    font-family: Gotham Pro, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 38px;
+    color: #2C2E32;
+  }
+
+  &__text {
+    font-family: Gotham Pro, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2C2E32;
+  }
+
+  &__decor_text {
+    font-family: Gotham Pro, serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 110px;
+    line-height: 105px;
+    text-align: right;
+    color: #2C2E32;
+    opacity: 0.1;
+  }
+
+  &__c {
+
+
+    &__label {
+      font-family: Gotham Pro, serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 24px;
+      color: #2C2E32;
+    }
+
+    &__value {
+      font-family: Gotham Pro, serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      color: #722ED1;
+    }
+  }
+}

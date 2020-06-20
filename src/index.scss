@@ -1,0 +1,64 @@
+/*  import Project modules */
+@import "templates/nav/nav";
+@import "templates/banner/banner";
+@import "templates/why_choose_us/WhyChooseUs";
+@import "templates/what_we_developed/WhatWeDeveloped";
+@import "templates/how_we_work/HowWeWork";
+@import "templates/tech/Tech";
+@import "templates/about/about";
+@import "templates/contacts/Contacts";
+@import "templates/footer/Footer";
+@import "templates/form/Form";
+
+@import "css/GothamPro/stylesheet.css";
+@import "~animate.css/animate.min.css";
+
+
+
+*:focus {
+  outline: none !important;
+}
+
+
+/*В what_we_developed есть элементы выходящие за границу body*/
+/*They affects on page width that is bad*/
+html, body {
+  overflow-x: hidden;
+}
+
+.animate__delay {
+  @mixin ds {
+    &-1s {
+      animation-delay: 1s;
+    }
+
+    &-2s {
+      animation-delay: 2s;
+    }
+
+    &-3s {
+      animation-delay: 3s;
+    }
+
+    &-4s {
+      animation-delay: 4s;
+    }
+
+    &-5s {
+      animation-delay: 5s;
+    }
+  }
+
+
+  &-md {
+    @media (min-width: 992px) {
+      @include ds;
+    }
+  }
+
+  &-sm {
+    @media (min-width: 768px) {
+      @include ds;
+    }
+  }
+}

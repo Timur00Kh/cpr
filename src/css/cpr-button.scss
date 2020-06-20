@@ -1,0 +1,28 @@
+.cpr-button {
+  width: 220px;
+  height: 70px;
+  /* Purpure */
+  background: #6324BA;
+  background: linear-gradient(-45deg, #722ED1 0%, #722ED1 15%, white 15%, white 16%, #722ED1 16%, #722ED1 17%, white 17%, white 18%, #722ED1 18%);
+  /* DS2 */
+  box-shadow: 0 34px 44px rgba(114, 46, 209, 0.2);
+  border: none;
+  color: white;
+  transition: all .2s ease;
+
+  font-family: Gotham Pro, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 21px;
+  /* identical to box height, or 162% */
+
+  text-align: center;
+  text-transform: uppercase;
+
+  &:active {
+    background: #6324BA;
+    background: linear-gradient(-45deg, #6324BA 0%, #6324BA 15%, white 15%, white 16%, #6324BA 16%, #6324BA 17%, white 17%, white 18%, #6324BA 18%);
+    box-shadow: 0 34px 44px rgba(114, 46, 209, 0);
+  }
+}
