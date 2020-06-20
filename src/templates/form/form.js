@@ -31,7 +31,7 @@ const modal = (() => {
             mb.classList.remove('animate__zoomIn');
             mb.classList.add('animate__zoomOut');
 
-            setTimeout(() => m.classList.remove('cpr-modal--active'), 500);
+            setTimeout(() => m.classList.remove('cpr-modal--active'), 800);
             icon.classList.remove('cpr-modal__icon--active');
         },
     }

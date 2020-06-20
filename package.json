@@ -32,6 +32,7 @@
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
+    "deploy": "npm run build && gh-pages -d dist",
     "dev": "webpack-dev-server --open",
     "watch": "webpack --watch",
     "build": "webpack",

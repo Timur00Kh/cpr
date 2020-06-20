@@ -8,7 +8,7 @@ module.exports = {
     mode: 'development',
     entry: './src/index.js',
     output: {
-        filename: 'main.js',
+        filename: 'main.[hash].js',
         path: path.resolve(__dirname, 'dist'),
     },
     devtool: 'source-map',
@@ -122,8 +122,8 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css',
-            chunkFilename: '[id].css',
+            filename: 'css/[name].[hash].css',
+            chunkFilename: '[id].[hash].css',
         }),
         new HtmlWebpackPlugin({
             title: 'Custom template using Handlebars',

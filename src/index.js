@@ -28,3 +28,12 @@ let scroll = new SmoothScroll('a[href*="#"]');
 document.getElementById('to_form').addEventListener('click', () => {
         scroll.animateScroll(document.getElementById('form'));
 });
+
+
+
+/*Костыль для gh_pages*/
+if (window.location.href.indexOf('timur00kh.github.io/cpr') > -1 ) {
+        document.querySelectorAll('img').forEach(img => {
+                img.src = '/cpr' + img.getAttribute('src');
+        })
+}

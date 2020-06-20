@@ -40,6 +40,7 @@
     top: calc(0px + 130%);
     padding: 20px 0;
     animation-duration: .4s;
+    z-index: 200;
   }
 
   &__link {
