@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Open Graph-->
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Разработка Web приложений и Сайтов">
+    <meta property="og:description" content="Cоздаем IT-продукт, приносящий прибыль при минимальных затратах">
+    <meta property="og:url" content="/">
+    <meta property="og:image" content="/icons/icon.svg">
+    <meta property="og:site_name" content="ЦПР">
+
     <title>CPR</title>
 <link href="css/main.css" rel="stylesheet"></head>
 <body>
@@ -179,7 +189,7 @@
                 <input pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" id="phone" class="form__input" type="tel" placeholder="Номер телефона">
             </div>
             <div class="col-auto mx-auto my-5">
-                <button class="form__button">Отправить</button>
+                <button id="form__button" class="form__button">Отправить</button>
             </div>
             <div class="col-12">
                 <p class="form__text-small">Нажимая кнопку отправить, вы соглашаетесь с
@@ -188,6 +198,21 @@
         </div>
     </div>
 </section>
+
+<div class="cpr-modal">
+    <div class="cpr-modal__backdrop animate__animated "></div>
+    <div class="cpr-modal__container ">
+        <div class="cpr-modal__body animate__animated ">
+            <span class="cpr-modal__close"></span>
+            <svg class="cpr-modal__icon" width="191" height="180" viewBox="0 0 191 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="90" cy="90" r="89.3" stroke="#722ED1" stroke-width="1.4"/>
+                <path d="M59 80.5L88 109.5L190.5 7" stroke="#722ED1" stroke-width="1.4"/>
+            </svg>
+            <h2 class="cpr-modal__header">Ваша заявка успешно отправлена</h2>
+            <p class="cpr-modal__text">Мы свяжемся с вами в ближайшее время</p>
+        </div>
+    </div>
+</div>
     <section class="how_we_work" id="work-steps">
     <div class="container px-4 px-md-3">
         <div class="row mb-5">
