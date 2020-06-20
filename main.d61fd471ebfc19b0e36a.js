@@ -5697,7 +5697,7 @@ const modal = (() => {
             mb.classList.remove('animate__zoomIn');
             mb.classList.add('animate__zoomOut');
 
-            setTimeout(() => m.classList.remove('cpr-modal--active'), 500);
+            setTimeout(() => m.classList.remove('cpr-modal--active'), 800);
             icon.classList.remove('cpr-modal__icon--active');
         },
     }
@@ -5736,6 +5736,8 @@ function open() {
 
     list.classList.remove('animate__fadeOutUp', 'd-none');
     list.classList.add('animate__animated', 'animate__fadeInDown');
+    flag = true;
+
 }
 
 function close() {
@@ -5743,15 +5745,14 @@ function close() {
 
     list.classList.remove('animate__fadeInDown');
     list.classList.add('animate__animated', 'animate__fadeOutUp');
+    flag = false;
 }
 
 switcher.addEventListener('click', () => {
     if (flag) {
         close();
-        flag = false;
     } else {
         open();
-        flag = true;
     }
 });
 
@@ -5764,9 +5765,11 @@ list.addEventListener('animationend', () => {
 window.addEventListener('click', (e) => {
     if (!e.target.closest('.lang-switch')) {
         close();
-        flag = false;
     }
 });
+
+window.addEventListener('scroll', () => close());
+
 
 
 /***/ }),
@@ -5784,7 +5787,81 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lang_switch_lang_switch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lang_switch_lang_switch__WEBPACK_IMPORTED_MODULE_0__);
 
 
+let flag = false;
+const mNav = (() => {
+    const b = document.getElementById('nav_button');
+    const m_nav = document.querySelector('.m_nav');
+    const nav = document.querySelector('.nav');
+
+
+
+    return {
+        open() {
+            document.querySelector('html').style.overflow = 'hidden';
+
+            b.classList.remove('nav__menu');
+            b.classList.add('nav__close');
+
+            m_nav.classList.remove('d-none', 'm_nav--closed');
+            m_nav.classList.add('m_nav--active');
+            flag = true;
+
+            nav.classList.remove('shadow')
+
+        },
+        close() {
+            document.querySelector('html').style.overflow = '';
+
+            b.classList.add('nav__menu');
+            b.classList.remove('nav__close');
+
+            m_nav.classList.remove('m_nav--active');
+            m_nav.classList.add('m_nav--closed');
+            // setTimeout(() => m_nav.classList.add('d-none'), 500);
+            flag = false;
+
+            setTimeout(() => nav.classList.add('shadow'), 200);
+        }
+    }
+})();
+
+document.getElementById('nav_button').addEventListener('click', (e) => {
+    if (flag) {
+        mNav.close()
+    } else {
+        mNav.open()
+    }
+});
+
+document.querySelectorAll('.m_nav__link')
+    .forEach(e => e.addEventListener('click', () => mNav.close()));
+
+
+let prevScrollPos = window.pageYOffset;
+window.onscroll = function() {
+    const currentScrollPos = window.pageYOffset;
+    const nav = document.querySelector('.nav');
+
+    if (currentScrollPos <= 80 || flag) {
+        nav.style.transitionDelay = '0s';
+        nav.style.top = "0";
+        return;
+    }
+
+    if (prevScrollPos > currentScrollPos) {
+        nav.style.transitionDelay = '0s';
+        nav.style.top = "0";
+    } else {
+        nav.style.transitionDelay = '.5s';
+        nav.style.top = "-85px";
+    }
+    prevScrollPos = currentScrollPos;
+};
+
+window.addEventListener('resize', () => mNav.close());
+
+
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.a150c820a5e9967597d4.js.map
+//# sourceMappingURL=main.d61fd471ebfc19b0e36a.js.map
