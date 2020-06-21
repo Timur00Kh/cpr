@@ -2,15 +2,18 @@
     <div class="container">
         <div class="row">
             <div class="col-12 wow animate__fadeIn">
-                <h2 style="display: none">О нас</h2>
+                <h2 style="display: none"><%=data.main.header%></h2>
                 <div class="d-none d-lg-block about__item">
-                    <%- require('svg-inline-loader!./about-lg.svg') %>
+<!--                    <%- require('svg-inline-loader!./about-lg.svg') %>-->
+                    <%- require ('ejs-webpack-loader!./about-lg.ejs')({data: data}) %>
                 </div>
                 <div class="d-none d-md-block d-lg-none about__item">
-                    <%- require('svg-inline-loader!./about-md.svg') %>
+<!--                    <%- require('svg-inline-loader!./about-md.svg') %>-->
+                    <%- require ('ejs-webpack-loader!./about-md.ejs')({data: data}) %>
                 </div>
                 <div class="d-block d-md-none about__item">
-                    <%- require('svg-inline-loader!./about-sm.svg') %>
+<!--                    <%- require('svg-inline-loader!./about-sm.svg') %>-->
+                    <%- require ('ejs-webpack-loader!./about-sm.ejs')({data: data}) %>
                 </div>
 
 <!--                <img class="img-fluid" src="/images/about-lg.svg" alt="about">-->

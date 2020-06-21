@@ -1,36 +1,42 @@
+<% const data = htmlWebpackPlugin.options.data.data %>
+<% const lang = htmlWebpackPlugin.options.data.lang %>
+<% const meta = htmlWebpackPlugin.options.data.meta %>
+<% const languages = htmlWebpackPlugin.options.languages %>
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="<%=meta.html_lang%>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--Open Graph-->
-    <meta property="og:locale" content="ru_RU">
+    <meta property="og:locale" content="<%=meta.openGraph.locale%>">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Разработка Web приложений и Сайтов">
-    <meta property="og:description" content="Cоздаем IT-продукт, приносящий прибыль при минимальных затратах">
-    <meta property="og:url" content="/">
-    <meta property="og:image" content="https://timur00kh.github.io/cpr/logo.png">
-    <meta property="og:site_name" content="ЦПР">
+    <meta property="og:title" content="<%=meta.openGraph.title%>">
+    <meta property="og:description" content="<%=meta.openGraph.description%>">
+    <meta property="og:url" content="<%=meta.openGraph.url%>">
+    <meta property="og:image" content="<%=meta.openGraph.image%>">
+    <meta property="og:site_name" content="<%=meta.openGraph.site_name%>">
 
     <title>CPR</title>
+    <link rel="shortcut icon" href="logo.png" type="image/png">
 </head>
 <body>
 <header>
-    <%- require ('ejs-webpack-loader!./templates/nav/Nav.ejs')() %>
+    <%- require ('ejs-webpack-loader!./templates/nav/Nav.ejs')({data: data.nav, languages: languages, lang: lang}) %>
 </header>
 
 <main>
-    <%- require ('ejs-webpack-loader!./templates/banner/Banner.ejs')() %>
-    <%- require ('ejs-webpack-loader!./templates/why_choose_us/WhyChooseUs.ejs')() %>
-    <%- require ('ejs-webpack-loader!./templates/what_we_developed/WhatWeDeveloped.ejs')() %>
-    <%- require ('ejs-webpack-loader!./templates/form/form.ejs')() %>
-    <%- require ('ejs-webpack-loader!./templates/how_we_work/HowWeWork.ejs')() %>
-    <%- require ('ejs-webpack-loader!./templates/tech/Tech.ejs')() %>
-    <%- require ('ejs-webpack-loader!./templates/about/about.ejs')() %>
-    <%- require ('ejs-webpack-loader!./templates/contacts/Contacts.ejs')() %>
+    <%- require ('ejs-webpack-loader!./templates/banner/Banner.ejs')({data: data.banner}) %>
+    <%- require ('ejs-webpack-loader!./templates/why_choose_us/WhyChooseUs.ejs')({data: data.why_us}) %>
+    <%- require ('ejs-webpack-loader!./templates/what_we_developed/WhatWeDeveloped.ejs')({data: data.we_developed}) %>
+    <%- require ('ejs-webpack-loader!./templates/form/form.ejs')({data: data.form}) %>
+    <%- require ('ejs-webpack-loader!./templates/how_we_work/HowWeWork.ejs')({data: data.how_we_work}) %>
+    <%- require ('ejs-webpack-loader!./templates/tech/Tech.ejs')({data: data.tech}) %>
+    <%- require ('ejs-webpack-loader!./templates/about/about.ejs')({data: data.about}) %>
+    <%- require ('ejs-webpack-loader!./templates/contacts/Contacts.ejs')({data: data.contacts}) %>
 </main>
 
-<%- require ('ejs-webpack-loader!./templates/footer/Footer.ejs')() %>
+<%- require ('ejs-webpack-loader!./templates/footer/Footer.ejs')({copyright: data.copyright}) %>
 </body>
 </html>

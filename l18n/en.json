@@ -1,0 +1,157 @@
+{
+  "lang": {
+    "name": "en",
+    "title": "English",
+    "title_en": "English"
+  },
+  "meta": {
+    "html_lang": "en",
+    "openGraph": {
+      "locale": "en_EN",
+      "title": "Development of Web applications and Websites",
+      "description":  "We create an IT product that makes a profit at minimal cost",
+      "url": "/en",
+      "image":  "https://timur00kh.github.io/cpr/logo.png",
+      "site_name": "CPR"
+    },
+    "title": "CPR",
+    "favicon": "logo.png"
+  },
+  "data": {
+    "nav": {
+      "services": "Services",
+      "why_us": "Why choose us",
+      "work_steps": "Stages of work",
+      "tech": "Technology",
+      "about": "About us",
+      "contacts": "Contact us"
+    },
+    "banner": {
+      "header": "Development of Web applications and Websites",
+      "text1": "We create an IT product that makes a profit at minimal cost",
+      "button_text": "View the cost",
+      "text2": "We immerse ourselves in your business (your ideas), study problems, <br>formulate tasks, find solutions, and create a digital product."
+    },
+    "why_us": {
+      "header": "Why us?",
+      "item1": {
+        "header": "It is beneficial",
+        "text": "We create useful and convenient services that sell and bring new customers"
+      },
+      "item2": {
+        "header": "Comprehensive and thorough problem analysis",
+        "text": "We have a team composed of experts in programming and business. Thus, we analyze the tasks from all angles and offer the most appropriate solutions"
+      },
+      "item3": {
+        "header": "New technology",
+        "text": "We use only modern and trusted tools to achieve maximum efficiency with the smallest investment"
+      },
+      "item4": {
+        "header": "Investment",
+        "text": "We consult our clients on the possibilities for grant applications"
+      }
+    },
+    "we_developed": {
+      "header": "We developed projects:",
+      "item1": {
+        "header": "Help2Sale",
+        "text": "SaaS platform for remote sales"
+      },
+      "item2": {
+        "header": "VITA",
+        "text": "Automatic lighting systems"
+      },
+      "item3": {
+        "header": "BuildAR",
+        "text": "Augmented reality digital platform"
+      }
+    },
+    "form": {
+      "header": "Want to order?",
+      "text": "Please leave a request and we will be happy to consult you at no charge.",
+      "input_placeholders": {
+        "p1": "Your name",
+        "p2": "Your E-mail",
+        "p3": "Your phone number"
+      },
+      "button_text": "SUBMIT",
+      "policy": {
+        "plain_text": "By clicking the submit button, you agree to",
+        "link_text": "the terms of the privacy policy.",
+        "href": "#"
+      },
+      "modal": {
+        "header": "Your application has been sent successfully",
+        "text": "We will contact you shortly"
+      }
+    },
+    "how_we_work": {
+      "header": "How do we work on the project",
+      "item1": {
+        "header": "Task",
+        "text": "We discuss in detail the tasks that you need to handle"
+      },
+      "item2": {
+        "header": "Requirements",
+        "text": "We create a technical description explaining what the system does and its functionality"
+      },
+      "item3": {
+        "header": "Design",
+        "text": "We define the main components of the system and design each element"
+      },
+      "item4": {
+        "header": "Engineering",
+        "text": "We choose the tools and ways to guarantee the quality of the work performed"
+      },
+      "item5": {
+        "header": "Implementation",
+        "text": "We perform technical realization of the product, its testing and required modifications"
+      }
+    },
+    "tech": {
+      "header": "Technology we use",
+      "item1": {
+        "header": "Front-end",
+        "text": "HTML 5, CSS 3, JS, jQuery, React.js, Svelte.js, Vue.js"
+      },
+      "item2": {
+        "header": "Back-end",
+        "text": "Java, Php, SQL, NoSQL, Python, C#, С++"
+      },
+      "item3": {
+        "header": "Database management systems",
+        "text": "MySql, PostgreSQL, SQLite, MongoDB"
+      }
+    },
+    "about": {
+      "main": {
+        "header": "About us",
+        "text": "We are a team of IT projects developers working for our customers"
+      },
+      "text1": "We create individual interfaces, web projects featuring a sophisticated design.",
+      "text2": "We generate new ideas for your business.",
+      "text3": "We provide a full range of services starting with drafting the technical requirements and ending with further support of the project."
+    },
+    "contacts": {
+      "header": "Contact us",
+      "text": "If you have an IT task, but you do not know how to handle it, our team can do it for you. Send us a description of your IT tasks, we will analyze them and get in touch with you.",
+      "decor_text": "Contact us",
+      "contact1": {
+        "header": "Е-mail",
+        "value": "mail-to@domain.com",
+        "href": "."
+      },
+      "contact2": {
+        "header": "Phone",
+        "value": "(499) 951-60-00",
+        "href": "."
+      },
+      "contact3": {
+        "header": "Skype",
+        "value": "skypeid",
+        "href": "."
+      }
+    },
+    "copyright": "Copyright © 2020 All rights reserved."
+  }
+}

@@ -1,11 +1,11 @@
 <div class="m_nav d-none">
     <div class="m_nav__container">
-        <a class="m_nav__link" href="#services">Услуги</a>
-        <a class="m_nav__link" href="#choose-us">почему мы</a>
-        <a class="m_nav__link" href="#work-steps">Этапы работы</a>
-        <a class="m_nav__link" href="#tech">Технологии</a>
-        <a class="m_nav__link" href="#about">О нас</a>
-        <a class="m_nav__link" href="#contacts">Контакты</a>
+        <a class="m_nav__link" href="#services"><%= data.services %></a>
+        <a class="m_nav__link" href="#choose-us"><%= data.why_us %></a>
+        <a class="m_nav__link" href="#work-steps"><%= data.work_steps %></a>
+        <a class="m_nav__link" href="#tech"><%= data.tech %></a>
+        <a class="m_nav__link" href="#about"><%= data.about %></a>
+        <a class="m_nav__link" href="#contacts"><%= data.contacts %></a>
     </div>
 </div>
 
@@ -18,27 +18,27 @@
             <div class="col-10 d-none d-md-block">
                 <div class="row text-center justify-content-center">
                     <div class="col-auto px-lg-4 d-none d-lg-block">
-                        <a class="nav__link" href="#services">Услуги</a>
+                        <a class="nav__link" href="#services"><%= data.services %></a>
                     </div>
                     <div class="col-auto px-lg-4">
-                        <a class="nav__link" href="#choose-us">почему мы</a>
+                        <a class="nav__link" href="#choose-us"><%= data.why_us %></a>
                     </div>
                     <div class="col-auto px-lg-4">
-                        <a class="nav__link" href="#work-steps">Этапы работы</a>
+                        <a class="nav__link" href="#work-steps"><%= data.work_steps %></a>
                     </div>
                     <div class="col-auto px-lg-4">
-                        <a class="nav__link" href="#tech">Технологии</a>
+                        <a class="nav__link" href="#tech"><%= data.tech %></a>
                     </div>
                     <div class="col-auto px-lg-4">
-                        <a class="nav__link" href="#about">О нас</a>
+                        <a class="nav__link" href="#about"><%= data.about %></a>
                     </div>
                     <div class="col-auto px-lg-4">
-                        <a class="nav__link" href="#contacts">Контакты</a>
+                        <a class="nav__link" href="#contacts"><%= data.contacts %></a>
                     </div>
                 </div>
             </div>
             <div class="ml-auto col-auto col-md-1 text-right">
-                <%- require('ejs-webpack-loader!./lang_switch/LangSwitch.ejs')({lox: 123}) %>
+                <%- require('ejs-webpack-loader!./lang_switch/LangSwitch.ejs')({languages: languages, lang: lang}) %>
             </div>
             <div style="min-width: 61px" class="col-auto d-md-none">
                 <span id="nav_button" class="nav__menu"></span>

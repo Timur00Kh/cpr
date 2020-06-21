@@ -2,30 +2,30 @@
     <div class="container px-4 px-md-3">
         <div class="row">
             <div class="col-md-5">
-                <h2 class="contacts__header">Контакты</h2>
-                <p class="contacts__text">Если у вас есть IT-задача, но Вы не знаете, как ее реализовать, наша команда может сделать это для Вас</p>
+                <h2 class="contacts__header"><%-data.header%></h2>
+                <p class="contacts__text"><%-data.text%></p>
             </div>
             <div class="col-md-7 d-none d-md-block wow animate__fadeInRight">
-                <h1 class="contacts__decor_text ">Контакты</h1>
+                <h1 class="contacts__decor_text "><%-data.header%></h1>
             </div>
         </div>
         <div class="row mt-5">
             <div class="col-sm-4">
                 <article>
-                    <h4 class="contacts__c__label">Е-mail</h4>
-                    <a class="contacts__c__value" href=".">mail-to@domain.com</a>
+                    <h4 class="contacts__c__label"><%-data.contact1.header%></h4>
+                    <a class="contacts__c__value" href="<%-data.contact1.href%>"><%-data.contact1.value%></a>
                 </article>
             </div>
             <div class="col-sm-4 mt-4 mt-sm-0">
                 <article>
-                    <h4 class="contacts__c__label">Телефон</h4>
-                    <a class="contacts__c__value" href=".">(499) 951-60-00</a>
+                    <h4 class="contacts__c__label"><%-data.contact2.header%></h4>
+                    <a class="contacts__c__value" href="<%-data.contact2.href%>"><%-data.contact2.value%></a>
                 </article>
             </div>
             <div class="col-sm-4 mt-4 mt-sm-0">
                 <article>
-                    <h4 class="contacts__c__label">Скайп</h4>
-                    <a class="contacts__c__value" href=".">skypeid</a>
+                    <h4 class="contacts__c__label"><%-data.contact3.header%></h4>
+                    <a class="contacts__c__value" href="<%-data.contact3.href%>"><%-data.contact3.value%></a>
                 </article>
             </div>
         </div>

@@ -2,18 +2,19 @@
     <div class="container px-4 px-md-3 wow animate__fadeIn">
         <div class="row text-center">
             <div class="col-12">
-                <h2 class="form__header">Хотите заказать?</h2>
-                <p class="form__text">Оставьте заявку, и мы с удовольствием бесплатно проконсультируем вас</p>
-                <input class="form__input" type="text" placeholder="Введите имя">
-                <input id="email" class="form__input" type="email" placeholder="Введите E-mail">
-                <input pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" id="phone" class="form__input" type="tel" placeholder="Номер телефона">
+                <h2 class="form__header"><%-data.header%></h2>
+                <p class="form__text"><%-data.text%></p>
+                <input class="form__input" type="text" placeholder="<%-data.input_placeholders.p1%>">
+                <input id="email" class="form__input" type="email" placeholder="<%-data.input_placeholders.p2%>">
+                <input pattern="\+7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}"
+                       id="phone" class="form__input" type="tel" placeholder="<%-data.input_placeholders.p3%>">
             </div>
             <div class="col-auto mx-auto my-5">
-                <button id="form__button" class="form__button">Отправить</button>
+                <button id="form__button" class="form__button"><%-data.button_text%></button>
             </div>
             <div class="col-12">
-                <p class="form__text-small">Нажимая кнопку отправить, вы соглашаетесь с
-                    <a class="form__link" href="#">условиями политики конфиденциальности</a></p>
+                <p class="form__text-small"><%-data.policy.plain_text%>
+                    <a class="form__link" href="<%-data.policy.href%>"><%-data.policy.link_text%></a></p>
             </div>
         </div>
     </div>
@@ -28,8 +29,8 @@
                 <circle cx="90" cy="90" r="89.3" stroke="#722ED1" stroke-width="1.4"/>
                 <path d="M59 80.5L88 109.5L190.5 7" stroke="#722ED1" stroke-width="1.4"/>
             </svg>
-            <h2 class="cpr-modal__header">Ваша заявка успешно отправлена</h2>
-            <p class="cpr-modal__text">Мы свяжемся с вами в ближайшее время</p>
+            <h2 class="cpr-modal__header"><%-data.modal.header%></h2>
+            <p class="cpr-modal__text"><%-data.modal.text%></p>
         </div>
     </div>
 </div>

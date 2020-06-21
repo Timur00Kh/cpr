@@ -1,7 +1,8 @@
 <div class="lang-switch">
-    <span class="lang-switch__label">ru</span>
+    <span class="lang-switch__label"><%= lang.name%></span>
     <div class="lang-switch__list animate__animated d-none">
-        <a class="lang-switch__link" href=".">ru</a>
-        <a class="lang-switch__link" href=".">en</a>
+        <% languages.forEach(function(lang){ %>
+            <a class="lang-switch__link" href="/<%=lang.name%>"><%= lang.name%></a>
+        <% }); %>
     </div>
 </div>

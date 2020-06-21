@@ -3,12 +3,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const HTMLInlineCSSWebpackPlugin = require("html-inline-css-webpack-plugin").default;
+const {data, languages} = require('./l18n_parcer.js');
 
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
     output: {
-        filename: 'main.[hash].js',
+        filename: 'js/main.[hash].js',
         path: path.resolve(__dirname, 'dist'),
     },
     devtool: 'source-map',
@@ -16,7 +17,6 @@ module.exports = {
         port: 8080,
         contentBase: './src',
         watchContentBase: true
-
     },
     module: {
         rules: [
@@ -70,18 +70,6 @@ module.exports = {
                 ],
                 exclude: /\.module\.css$/
             },
-            // {
-            //     test: /\.ejs$/,
-            //     use: [
-            //         {
-            //             loader: "ejs-webpack-loader",
-            //             options: {
-            //                 data: {title: "New Title", someVar:"hello world"},
-            //                 htmlmin: true
-            //             }
-            //         }
-            //     ]
-            // },
             {
                 test: /\.s[ac]ss$/i,
                 use: [
@@ -106,18 +94,6 @@ module.exports = {
                     }
                 ],
             },
-            // {
-            //     test: /\.ejs$/,
-            //     use: {
-            //         loader: 'ejs-compiled-loader',
-            //         options: {
-            //             htmlmin: true,
-            //             htmlminOptions: {
-            //                 removeComments: true
-            //             }
-            //         }
-            //     }
-            // }
         ]
     },
     plugins: [
@@ -125,12 +101,16 @@ module.exports = {
             filename: 'css/[name].[hash].css',
             chunkFilename: '[id].[hash].css',
         }),
-        new HtmlWebpackPlugin({
-            title: 'Custom template using Handlebars',
-            template: 'ejs-webpack-loader!src/index.ejs',
-            cache: false,
+        ...data.map(data => {
+
+            return new HtmlWebpackPlugin({
+                template: 'ejs-webpack-loader!src/index.ejs',
+                cache: false,
+                data,
+                languages,
+                filename: `${data.lang.name}/index.html`
+            })
         }),
-        // HTMLInlineCSSWebpackPlugin(),
         new CopyPlugin({
             patterns: [
                 'src/resources'
