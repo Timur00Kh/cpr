@@ -5886,10 +5886,14 @@ window.onscroll = function() {
     prevScrollPos = currentScrollPos;
 };
 
-window.addEventListener('resize', () => mNav.close());
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        mNav.close()
+    }
+});
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.20b833c231b84dc15736.js.map
+//# sourceMappingURL=main.42699773a6ea3af62b99.js.map
