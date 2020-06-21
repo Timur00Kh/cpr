@@ -43,7 +43,29 @@ document.querySelector('.cpr-modal__backdrop').addEventListener('click', (e) => 
         modal.close()
     }
 });
+
+const form = document.querySelector('.form');
 document.querySelector('#form__button').addEventListener('click', () => {
     /*TODO: validation*/
+    const inputs = form.querySelectorAll('.form__input');
+    inputs.forEach(input => input.setAttribute('required', 'true'));
+
+    const invalid_inputs = form.querySelectorAll('.form__input:invalid');
+    if (invalid_inputs.length) {
+        invalid_inputs.forEach(input => {
+            const removeAnimation = () => {
+                input.classList.remove('animate__animated', 'animate__shakeX');
+                input.removeEventListener('animationend', removeAnimation);
+            };
+
+            input.classList.add('animate__animated', 'animate__shakeX');
+            input.addEventListener('animationend', removeAnimation);
+        });
+        return;
+    }
+    console.log(invalid_inputs);
+
+
+
     modal.show()
 });

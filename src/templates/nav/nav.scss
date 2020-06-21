@@ -59,6 +59,7 @@ $h-sm: 60px;
   }
 
   &__close {
+    margin-top: 5px;
     content: url("close.svg");
     cursor: pointer;
     animation: r .5s ease;
