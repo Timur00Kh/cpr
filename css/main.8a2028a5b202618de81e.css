@@ -5373,6 +5373,7 @@ a.text-dark:hover, a.text-dark:focus {
   transform-origin: right center;
 }
 .nav__close {
+  margin-top: 5px;
   content: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xMi41MDAzIDEwLjU4NTlMMi4yNDcyMiAwLjMzMjczM0wwLjgzMzAwOCAxLjc0Njk1TDExLjA4NjEgMTIuMDAwMUwwLjgzMzE1OSAyMi4yNTMxTDIuMjQ3MzcgMjMuNjY3M0wxMi41MDAzIDEzLjQxNDNMMjIuNzUzMyAyMy42NjczTDI0LjE2NzUgMjIuMjUzTDEzLjkxNDYgMTIuMDAwMUwyNC4xNjc3IDEuNzQ2OTZMMjIuNzUzNSAwLjMzMjc0MkwxMi41MDAzIDEwLjU4NTlaIiBmaWxsPSIjRUI1NzU3Ii8+DQo8L3N2Zz4NCg==);
   cursor: pointer;
   animation: r 0.5s ease;
@@ -6346,4 +6347,4 @@ html, body {
   }
 }
 
-/*# sourceMappingURL=main.f5c901696f367a4d6a74.css.map*/
+/*# sourceMappingURL=main.8a2028a5b202618de81e.css.map*/
