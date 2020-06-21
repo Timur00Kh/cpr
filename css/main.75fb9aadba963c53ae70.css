@@ -6016,6 +6016,30 @@ main {
 .about__item {
   text-align: center;
 }
+.about svg h2 {
+  font-family: Gotham Pro, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #2C2E32;
+}
+@media (min-width: 768px) {
+  .about svg h2 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+.about svg p {
+  font-family: Gotham Pro, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #2C2E32;
+}
 
 .contacts {
   padding: 100px 0;
@@ -6350,4 +6374,4 @@ html, body {
   }
 }
 
-/*# sourceMappingURL=main.42699773a6ea3af62b99.css.map*/
+/*# sourceMappingURL=main.75fb9aadba963c53ae70.css.map*/
