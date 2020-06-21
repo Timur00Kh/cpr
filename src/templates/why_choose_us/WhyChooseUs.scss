@@ -33,7 +33,7 @@
   }
 
   &__item {
-    height: 245px;
+    min-height: 245px;
     //align-items: center;
     //display: flex;
     background: url("img/square.svg") no-repeat left top;
