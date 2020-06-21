@@ -71,4 +71,8 @@ window.onscroll = function() {
     prevScrollPos = currentScrollPos;
 };
 
-window.addEventListener('resize', () => mNav.close());
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        mNav.close()
+    }
+});
