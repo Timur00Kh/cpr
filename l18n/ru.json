@@ -153,6 +153,13 @@
         "href": "."
       }
     },
-    "copyright": "Copyright © 2020 All rights reserved."
+    "footer": {
+      "copyright": "Copyright © 2020 All rights reserved.",
+      "links": {
+        "inst": ".",
+        "tg": ".",
+        "fb": "."
+      }
+    }
   }
 }
