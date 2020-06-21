@@ -5,6 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const HTMLInlineCSSWebpackPlugin = require("html-inline-css-webpack-plugin").default;
 const {data, languages} = require('./l18n_parcer.js');
 
+const main_index = data.find(e => e.main_index) || data[0];
+
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
@@ -110,6 +112,13 @@ module.exports = {
                 languages,
                 filename: `${data.lang.name}/index.html`
             })
+        }),
+        new HtmlWebpackPlugin({
+            template: 'ejs-webpack-loader!src/index.ejs',
+            cache: false,
+            data: main_index,
+            languages,
+            filename: `index.html`
         }),
         new CopyPlugin({
             patterns: [

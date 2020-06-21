@@ -35,5 +35,11 @@ document.getElementById('to_form').addEventListener('click', () => {
 if (window.location.href.indexOf('timur00kh.github.io/cpr') > -1 ) {
         document.querySelectorAll('img').forEach(img => {
                 img.src = '/cpr' + img.getAttribute('src');
-        })
+        });
+        document.querySelectorAll('a').forEach(a => {
+                let href = a.getAttribute('href');
+                if (href && href.charAt(0) === '/') {
+                        a.href = '/cpr' + href;
+                }
+        });
 }
