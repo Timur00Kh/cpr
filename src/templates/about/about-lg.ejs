@@ -1,12 +1,18 @@
-<svg width="1170" height="1099" viewBox="0 0 1170 1099" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1170 1099" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M276.5 486L379 429.5" stroke="#722ED1"></path>
     <path d="M701 654L604 468" stroke="#722ED1"></path>
-    <text fill="#2C2E32" xml:space="preserve" style="white-space: pre" font-family="Gotham Pro" font-size="16"
-          letter-spacing="0em">
-        <tspan x="879.727" y="256.56"><%-data.text1.split(' ').slice(0, 3).join(' ')%></tspan>
-        <tspan x="884.492" y="280.56"><%-data.text1.split(' ').slice(3, 6).join(' ')%></tspan>
-        <tspan x="864.164" y="304.56"><%-data.text1.split(' ').slice(6).join(' ')%></tspan>
-    </text>
+
+    <foreignObject x="863" y="240" width="274" height="100">
+        <p xmlns="http://www.w3.org/1999/xhtml"><%=data.text1%></p>
+    </foreignObject>
+    <foreignObject x="589.5" y="823" width="383" height="100">
+        <p xmlns="http://www.w3.org/1999/xhtml"><%=data.text3%></p>
+    </foreignObject>
+    <foreignObject x="22" y="537" width="256" height="60">
+        <p xmlns="http://www.w3.org/1999/xhtml"><%=data.text2%></p>
+    </foreignObject>
+
+
     <circle cx="1000" cy="279" r="169.5" stroke="#E8E9EF"></circle>
     <path d="M855.396 189.615C843.237 209.286 835.218 231.231 831.832 254.108C828.446 276.985 829.763 300.312 835.703 322.662C841.642 345.012 852.079 365.916 866.376 384.093C880.672 402.271 898.527 417.34 918.848 428.38L919.173 427.782C898.934 416.786 881.15 401.777 866.911 383.672C852.672 365.567 842.277 344.748 836.361 322.487C830.445 300.226 829.133 276.993 832.506 254.208C835.879 231.423 843.865 209.565 855.975 189.973L855.396 189.615Z"
           fill="#722ED1"></path>
@@ -14,27 +20,22 @@
     <path d="M753.612 640.636C698.065 647.298 646.85 673.978 609.557 715.68C572.263 757.381 551.447 811.247 551.007 867.19L551.928 867.197C552.367 811.478 573.099 757.829 610.243 716.294C647.388 674.759 698.397 648.186 753.722 641.551L753.612 640.636Z"
           fill="#722ED1"></path>
     <circle cx="206" cy="191" r="39.5" stroke="#E8E9EF"></circle>
-    <text fill="#2C2E32" xml:space="preserve" style="white-space: pre" font-family="Gotham Pro" font-size="16"
-          letter-spacing="0em">
-        <tspan x="611.141" y="849.56">Мы предоставляем полный спектр услуг:</tspan>
-        <tspan x="611.039" y="873.56">от составления технического задания до</tspan>
-        <tspan x="620.008" y="897.56">дальнейшего сопровождения проекта.</tspan></text>
-    <text fill="#2C2E32" xml:space="preserve" style="white-space: pre" font-family="Gotham Pro" font-size="16" letter-spacing="0em">
-        <tspan x="35.5312" y="558.56">Мы генерируем новые идеи</tspan>
-        <tspan x="67.3906" y="582.56">для вашего бизнеса</tspan></text>
     <g filter="url(#filter0_d)">
         <ellipse cx="584" cy="330.5" rx="265" ry="264.5" fill="white"></ellipse>
     </g>
     <circle cx="150" cy="566" r="149.5" stroke="#E8E9EF"></circle>
     <path d="M298.388 587.932C302.679 558.9 298.359 529.246 285.963 502.644C273.568 476.043 253.641 453.662 228.651 438.273L228.336 438.785C253.226 454.112 273.073 476.403 285.419 502.898C297.765 529.393 302.067 558.928 297.794 587.844L298.388 587.932Z"
           fill="#722ED1"></path>
-    <text fill="#2C2E32" xml:space="preserve" style="white-space: pre" font-family="Gotham Pro" font-size="30" letter-spacing="0em">
-        <tspan x="540.143" y="315.55">О нас</tspan>
-    </text>
-    <text fill="#2C2E32" xml:space="preserve" style="white-space: pre" font-family="Gotham Pro" font-size="16" letter-spacing="0em">
-        <tspan x="412.805" y="352.56">Мы - команда разработчиков IT проектов</tspan>
-        <tspan x="521.18" y="376.56">для заказчиков</tspan>
-    </text>
+
+
+    <foreignObject x="398" y="285" width="372" height="60">
+        <h2 xmlns="http://www.w3.org/1999/xhtml"><%=data.main.header%></h2>
+    </foreignObject>
+    <foreignObject x="398" y="335" width="372" height="60">
+        <p xmlns="http://www.w3.org/1999/xhtml"><%=data.main.text%></p>
+    </foreignObject>
+
+
     <defs>
         <filter id="filter0_d" x="249" y="0" width="670" height="669" filterUnits="userSpaceOnUse"
                 color-interpolation-filters="sRGB">
