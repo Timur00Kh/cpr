@@ -1,0 +1,65 @@
+.animate__delay {
+  @mixin ds {
+    &-1s {
+      animation-delay: 1s;
+    }
+
+    &-2s {
+      animation-delay: 2s;
+    }
+
+    &-3s {
+      animation-delay: 3s;
+    }
+
+    &-4s {
+      animation-delay: 4s;
+    }
+
+    &-5s {
+      animation-delay: 5s;
+    }
+  }
+
+
+  &-md {
+    @media (min-width: 992px) {
+      @include ds;
+    }
+  }
+
+  &-sm {
+    @media (min-width: 768px) {
+      @include ds;
+    }
+  }
+}
+
+.animate {
+  @mixin adaptive_animations {
+    &__fadeInDown {
+      animation-name: fadeInDown;
+    }
+
+    &__fadeIn {
+      animation-name: fadeIn;
+    }
+
+    &__zoomIn {
+      animation-name: zoomIn;
+    }
+  }
+
+  &__md {
+    @media (min-width: 992px) {
+      @include adaptive_animations;
+    }
+  }
+
+  &__md-max {
+    @media (max-width: 991px) {
+      @include adaptive_animations;
+    }
+  }
+}
+

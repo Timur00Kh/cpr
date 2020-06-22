@@ -11,6 +11,7 @@
 @import "templates/form/Form";
 
 @import "css/GothamPro/stylesheet.css";
+@import "css/animation";
 @import "~animate.css/animate.min.css";
 
 
@@ -26,42 +27,6 @@ html, body {
   overflow-x: hidden;
 }
 
-.animate__delay {
-  @mixin ds {
-    &-1s {
-      animation-delay: 1s;
-    }
-
-    &-2s {
-      animation-delay: 2s;
-    }
-
-    &-3s {
-      animation-delay: 3s;
-    }
-
-    &-4s {
-      animation-delay: 4s;
-    }
-
-    &-5s {
-      animation-delay: 5s;
-    }
-  }
-
-
-  &-md {
-    @media (min-width: 992px) {
-      @include ds;
-    }
-  }
-
-  &-sm {
-    @media (min-width: 768px) {
-      @include ds;
-    }
-  }
-}
 
 .lock {
   overflow: hidden;
