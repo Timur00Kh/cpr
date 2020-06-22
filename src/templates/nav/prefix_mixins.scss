@@ -1,0 +1,40 @@
+$prefixes: o-, ms-, moz-, webkit-;
+@mixin animation($a, $value) {
+  @each $p in $prefixes {
+    -#{$p}animation: #{$p}#{$a} $value;
+  }
+  animation: $a $value;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes webkit-#{$name} {
+    @content;
+  }
+  @-moz-keyframes moz-#{$name} {
+    @content;
+  }
+  @-ms-keyframes ms-#{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@include keyframes(m) {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@include keyframes(r) {
+  from {
+    transform: rotate(-136deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}

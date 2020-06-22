@@ -54,15 +54,21 @@ $h-sm: 60px;
     content: url("menu.svg");
     margin-top: 5px;
     cursor: pointer;
-    animation: m .5s ease;
     transform-origin: right center;
+
+    &--animated {
+      animation: m .5s ease;
+    }
   }
 
   &__close {
     margin-top: 5px;
     content: url("close.svg");
     cursor: pointer;
-    animation: r .5s ease;
+
+    &--animated {
+      animation: r .5s ease;
+    }
   }
 
   @keyframes m {
@@ -90,7 +96,7 @@ $h-sm: 60px;
   top: 60px;
   background: white;
   width: 100%;
-  height: calc(100% - 60px);
+  height: calc(100vh - 60px);
   z-index: 10;
   overflow: scroll;
 
