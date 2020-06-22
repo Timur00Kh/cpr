@@ -168,7 +168,7 @@
 
     circle {
       stroke-dasharray: 564;
-      stroke-dashoffset: -564;
+      stroke-dashoffset: 564;
     }
 
     &--active {
@@ -181,7 +181,7 @@
 
       circle {
         stroke-dasharray: 564;
-        stroke-dashoffset: 0;
+        stroke-dashoffset: 1128;
         transition: stroke-dashoffset .9s ease;
         transition-delay: .2s;
       }
