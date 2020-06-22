@@ -57,7 +57,10 @@ $h-sm: 60px;
     transform-origin: right center;
 
     &--animated {
-      animation: m .5s ease;
+      animation-name: m;
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+      animation-duration: .5s;
+      animation-fill-mode: both;
     }
   }
 
@@ -67,25 +70,32 @@ $h-sm: 60px;
     cursor: pointer;
 
     &--animated {
-      animation: r .5s ease;
+      animation-name: r;
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+      animation-duration: .5s;
+      animation-fill-mode: both;
     }
   }
 
   @keyframes m {
     from {
-      transform: scaleX(0);
+      transform: scale3d(0.1, 1, 1);
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
     }
-    to {
-      transform: scaleX(1);
+    60% {
+      transform: scale3d(1, 1, 1);
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
     }
   }
 
   @keyframes r {
     from {
-      transform: rotate(-135deg);
+      transform: rotate3d(0.1, 0.1, 1, -135deg);
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
     }
-    to {
-      transform: rotate(0);
+    60% {
+      transform: rotate3d(0.1, 0.1, 1, 0deg);
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
     }
   }
 
@@ -101,12 +111,12 @@ $h-sm: 60px;
   overflow: scroll;
 
   &--active {
-    animation: h .5s ease;
+    animation: h .5s cubic-bezier(0.175, 0.885, 0.32, 1);;
   }
 
   &--closed {
     height: 0;
-    animation: hr .5s ease;
+    animation: hr .5s cubic-bezier(0.175, 0.885, 0.32, 1);;
   }
 
   @media (min-width: 768px) {

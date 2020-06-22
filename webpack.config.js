@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const autoprefixer = require('autoprefixer');
 // const HTMLInlineCSSWebpackPlugin = require("html-inline-css-webpack-plugin").default;
 const {data, languages} = require('./l18n_parcer.js');
 
@@ -85,6 +86,18 @@ module.exports = {
                     // 'style-loader',
                     // Translates CSS into CommonJS
                     'css-loader',
+
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: [
+                                autoprefixer({
+                                    browsers:['ie >= 8', 'last 4 version']
+                                })
+                            ],
+                            sourceMap: true
+                        }
+                    },
 
                     'resolve-url-loader',
                     // Compiles Sass to CSS
