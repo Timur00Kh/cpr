@@ -1,5 +1,7 @@
 import './bootstrap.scss'
 import './index.scss'
+import 'animate.css/animate.min.css'
+import "./css/GothamPro/stylesheet.css";
 
 import './templates/nav/nav'
 import './templates/form/form'

@@ -3,19 +3,21 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
-// const HTMLInlineCSSWebpackPlugin = require("html-inline-css-webpack-plugin").default;
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const {data, languages} = require('./l18n_parcer.js');
+const argv = require('minimist')(process.argv.slice(2));
+const { dev: DEV } = argv;
 
 const main_index = data.find(e => e.main_index) || data[0];
 
 module.exports = {
-    mode: 'development',
+    mode: DEV ? 'development' : 'production',
     entry: './src/index.js',
     output: {
-        filename: 'js/main.[hash].js',
+        filename: DEV ? 'js/main.js' : 'js/main.[hash].min.js',
         path: path.resolve(__dirname, 'dist'),
     },
-    devtool: 'source-map',
+    devtool: DEV ? 'source-map' : '',
     devServer: {
         port: 8080,
         contentBase: './src',
@@ -54,24 +56,14 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    'style-loader',
                     {
-                        loader: 'css-loader',
+                        loader: MiniCssExtractPlugin.loader,
                         options: {
-                            importLoaders: 1,
-                            modules: true
+                            publicPath: '../',
                         }
-                    }
-                ],
-                include: /\.module\.css$/
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
+                    },
                     'css-loader'
-                ],
-                exclude: /\.module\.css$/
+                ]
             },
             {
                 test: /\.s[ac]ss$/i,
@@ -82,25 +74,18 @@ module.exports = {
                             publicPath: '../',
                         }
                     },
-                    // Creates `style` nodes from JS strings
-                    // 'style-loader',
-                    // Translates CSS into CommonJS
                     'css-loader',
 
                     {
                         loader: 'postcss-loader',
                         options: {
                             plugins: [
-                                autoprefixer({
-                                    browsers:['ie >= 8', 'last 4 version']
-                                })
+                                autoprefixer()
                             ],
                             sourceMap: true
                         }
                     },
-
                     'resolve-url-loader',
-                    // Compiles Sass to CSS
                     {
                         loader: 'sass-loader',
                         options: {
@@ -112,9 +97,10 @@ module.exports = {
         ]
     },
     plugins: [
+        DEV ? () => {} : new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: 'css/[name].[hash].css',
-            chunkFilename: '[id].[hash].css',
+            filename: DEV ? 'css/[name].css' : 'css/[name].[hash].css',
+            chunkFilename: DEV ? 'css/[id].[name].css' : 'css/[id].[name].[hash].css',
         }),
         ...data.map(data => {
 
@@ -138,5 +124,17 @@ module.exports = {
                 'src/resources'
             ]
         }),
-    ]
+    ],
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                styles: {
+                    name: 'styles',
+                    test: /\.css$/,
+                    chunks: 'all',
+                    enforce: true,
+                },
+            },
+        }
+    },
 };
