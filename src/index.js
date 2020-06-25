@@ -44,4 +44,7 @@ if (window.location.href.indexOf('timur00kh.github.io/cpr') > -1 ) {
                         a.href = '/cpr' + href;
                 }
         });
+
+        let icon = document.querySelector('head > link[href="/logo.png"]');
+        icon.href = '/cpr' + icon.getAttribute('href');
 }
