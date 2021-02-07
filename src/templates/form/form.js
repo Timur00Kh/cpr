@@ -63,7 +63,12 @@ document.querySelector('#form__button').addEventListener('click', async () => {
         });
         return;
     }
-    console.log(Array.from(inputs).map(e => e.value));
+
+    // чтоб демо на гитхабе работало
+    if (window.location.host.includes('github.io')) {
+        modal.show()
+        return;
+    }
 
     const [name, email, phone] = Array.from(inputs).map(e => e.value)
     const res = await sendForm(name, email, phone)
