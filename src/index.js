@@ -27,8 +27,9 @@ wow.init();
 
 import SmoothScroll from 'smooth-scroll';
 let scroll = new SmoothScroll('a[href*="#"]');
-document.getElementById('to_form').addEventListener('click', () => {
-        scroll.animateScroll(document.getElementById('form'));
+document.getElementById('to_form').addEventListener('click', (e) => {
+        document.getElementById('form').scrollIntoView()
+        // scroll.animateScroll(document.getElementById('form'));
 });
 
 
