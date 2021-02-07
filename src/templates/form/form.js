@@ -45,7 +45,7 @@ document.querySelector('.cpr-modal__backdrop').addEventListener('click', (e) => 
 });
 
 const form = document.querySelector('.form');
-document.querySelector('#form__button').addEventListener('click', () => {
+document.querySelector('#form__button').addEventListener('click', async () => {
     /*TODO: validation*/
     const inputs = form.querySelectorAll('.form__input');
     inputs.forEach(input => input.setAttribute('required', 'true'));
@@ -63,9 +63,32 @@ document.querySelector('#form__button').addEventListener('click', () => {
         });
         return;
     }
-    console.log(invalid_inputs);
+    console.log(Array.from(inputs).map(e => e.value));
 
+    const [name, email, phone] = Array.from(inputs).map(e => e.value)
+    const res = await sendForm(name, email, phone)
 
-
-    modal.show()
+    if (res.ok) {
+        modal.show()
+    } else {
+        alert(("[" + res.status + ":" + res.statusText + "] while fetching " +
+            res.url + ", response is " + await res.text()) )
+    }
 });
+
+async function sendForm(
+    name,
+    email,
+    phone
+) {
+    const formData = new FormData();
+
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('phone', phone);
+
+    return fetch('/order_project.php', {
+        method: 'POST',
+        body: formData
+    });
+}
