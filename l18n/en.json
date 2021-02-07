@@ -138,26 +138,26 @@
       "decor_text": "Contact us",
       "contact1": {
         "header": "Е-mail",
-        "value": "mail-to@domain.com",
-        "href": "."
+        "value": "info@cpr-team.ru",
+        "href": "mailto:info@cpr-team.ru"
       },
       "contact2": {
-        "header": "Phone",
-        "value": "(499) 951-60-00",
-        "href": "."
+        "header": "Телефон",
+        "value": "8 800 100-32-87",
+        "href": "tel:+78001003287"
       },
       "contact3": {
-        "header": "Skype",
-        "value": "skypeid",
-        "href": "."
+        "header": "Telegram",
+        "value": "@giftedplanet",
+        "href": "https://telegram.me/giftedplanet"
       }
     },
     "footer": {
       "copyright": "Copyright © 2020 All rights reserved.",
       "links": {
-        "inst": ".",
-        "tg": ".",
-        "fb": "."
+        "inst": "https://www.instagram.com/cpr.tech.team",
+        "tg": "https://telegram.me/giftedplanet",
+        "fb": "https://www.facebook.com/cpr.online"
       }
     }
   }
