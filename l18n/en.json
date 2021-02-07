@@ -78,7 +78,7 @@
       "policy": {
         "plain_text": "By clicking the submit button, you agree to",
         "link_text": "the terms of the privacy policy.",
-        "href": "#"
+        "href": "/policy"
       },
       "modal": {
         "header": "Your application has been sent successfully",
